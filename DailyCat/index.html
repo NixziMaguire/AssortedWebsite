@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p style="text-align:center;">
+	<img src="http://www.catoftheday.com/archive/2018/June/10.jpg" alt="Cute Cats" id="demo">
+</p>
+<style> 
+	body{
+	background-color: #000000 
+	}
+</style>
+<script>
+var date = new Date();
+date.setDate(date.getDate() - 1); // to account for american servers
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+document.getElementById("demo").src = "http://www.catoftheday.com/archive/"+date.getFullYear()+"/"+months[date.getMonth()]+"/"+("0" + date.getDate()).slice(-2)+".jpg";
+</script>
+
+</body>
+</html>
